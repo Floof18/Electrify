@@ -1,0 +1,15 @@
+<input type="text" id="messageBox" maxlength="100">
+<input type="button" id="sendButton" value="Send">
+
+<p class="output" id="output"></p>
+
+<script>
+    const textBox = document.getElementById("messageBox");
+    const send = document.getElementById("sendButton");
+
+    send.onclick = function(){
+        let message = document.createElement("p");
+        message.innerText = textBox.value;
+        document.body.appendChild(message);
+    };
+</script>
